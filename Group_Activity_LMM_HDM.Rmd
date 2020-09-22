@@ -1,0 +1,53 @@
+---
+title: 'Class Activity: Linear-Mixed Effects Models for Hierarchical Data'
+subtitle: 'STAT 340: Applied Regression'
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+```
+
+# Exam scores from Inner London
+
+```{r}
+library(lmer)
+library(nlme)
+library(mlmRev)
+data(Exam)
+```
+
+- `school`: School ID (a factor)
+- `normexam`: Normalized exam score
+- `schgend`: School gender (a factor); levels are `mixed`, `boys`, `girls`
+- `schavg`: School average of intake score
+- `vr`: Student level Verbal Reasoning (VR) score band at intake (a factor). Levels are `bottom 25%`, `mid 50%`, `top 25%`
+- `standLRT`: Standardized LR test score
+- `sex`: Sex of the student - levels are `F` and `M`
+- `type`: School type - levels are `Mxd` and `Sngl`
+- `student`: Student id (within school, a factor)
+
+### (1) Identify which variables are on the School level, and which are on the student level. Would you consider any modifications to these variables (like centering)?
+
+
+
+### (2) Fit the null model for `normexam`, with a fixed intercept and a random intercept.
+
+```{r}
+
+```
+
+
+### (3) Fit a linear mixed-effects model for `normexam`, with a random intercept and `schavg` as a fixed effect.
+
+```{r}
+
+```
+
+### (4) Fit a linear mixed-effects model for `normexam`, with fixed effects for `standLRT` and `schavg`, and a random intercept and random effect for `standLRT`. What assumption does this make about `standLRT`? Would you recommend any modifications (think Question 1)?
+
+```{r}
+
+```
+
